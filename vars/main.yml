@@ -1,0 +1,9 @@
+---
+# Set to absent to take down machines
+instance_state: present
+
+# Hostname
+hostname: deploy-cb
+
+# Server name
+servername: deploy-cb

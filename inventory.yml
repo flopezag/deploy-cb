@@ -1,0 +1,2 @@
+[deploy-cb]
+<IP of the VM> ansible_ssh_user=ubuntu

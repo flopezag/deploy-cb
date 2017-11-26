@@ -1,0 +1,19 @@
+mongodb:
+  image: mongo:3.2
+  hostname: mongodb
+  container_name: mongodb
+  command: --nojournal
+  expose:
+    - "27017"
+ 
+orion:
+    image: fiware/orion:latest
+    hostname: orion
+    container_name: orion
+    links:
+        - mongodb
+    expose:
+        - "1026"
+    ports:
+        - "1026:1026"
+    command: -dbhost mongodb
